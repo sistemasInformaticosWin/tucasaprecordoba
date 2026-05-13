@@ -28,7 +28,7 @@ body::before {
 nav {
   position:fixed; inset:0 0 auto; z-index:720;
   display:flex; align-items:center; justify-content:space-between;
-  padding:0 52px; height:96px;
+  padding:0 52px; height:100px;
   background:rgba(10,8,7,.82);
   backdrop-filter:blur(18px);
   border-bottom:1px solid rgba(255,255,255,.07);
@@ -37,8 +37,8 @@ nav {
   overflow:visible;
 }
 nav.revealed { opacity:1; transform:translateY(0); pointer-events:auto; }
-nav.solid { height:72px; background:rgba(10,8,7,.97); border-color:rgba(255,255,255,.1); }
-nav.solid .logo-img { height:54px; }
+nav.solid { height:100px; background:rgba(10,8,7,.97); border-color:rgba(255,255,255,.1); }
+nav.solid .logo-img { height:80px; }
 nav.menu-open { background:transparent !important; backdrop-filter:none !important; border-color:transparent !important; }
 
 .logo {
@@ -46,7 +46,7 @@ nav.menu-open { background:transparent !important; backdrop-filter:none !importa
   text-decoration:none;
 }
 .logo-img {
-  height:76px; width:auto; display:block;
+  height:80px; width:auto; display:block;
   transition: opacity .2s, height .35s ease;
 }
 .logo:hover .logo-img { opacity:.75; }
@@ -74,7 +74,7 @@ nav.menu-open { background:transparent !important; backdrop-filter:none !importa
 .nl-drop { position:relative; display:flex; align-items:center; }
 .nl-drop > a {
   color:rgba(244,237,230,.38); text-decoration:none;
-  font-size:10px; letter-spacing:.16em; text-transform:uppercase;
+  font-size:12px; letter-spacing:.14em; text-transform:uppercase;
   display:flex; align-items:center; gap:5px;
   transition:color .2s; position:relative;
 }
