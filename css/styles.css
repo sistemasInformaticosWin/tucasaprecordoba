@@ -141,14 +141,14 @@ nav.menu-open { background:transparent !important; backdrop-filter:none !importa
 .nr a:hover { color:rgba(244,237,230,.8); }
 .n-phone {
   font-family:'Cormorant Garamond',serif;
-  font-size:16px; font-weight:300; font-style:italic;
+  font-size:22px; font-weight:300; font-style:italic;
   color:rgba(244,237,230,.55); letter-spacing:.04em;
 }
-.n-div { width:1px; height:16px; background:rgba(244,237,230,.12); }
+.n-div { width:1px; height:22px; background:rgba(244,237,230,.12); }
 .n-cta {
-  padding:9px 22px;
+  padding:13px 30px;
   background:var(--terra); color:var(--white)!important;
-  font-size:9px!important; letter-spacing:.16em;
+  font-size:12px!important; letter-spacing:.16em;
   border:none; transition:background .2s!important;
 }
 .n-cta:hover { background:var(--terra2)!important; }
