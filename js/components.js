@@ -16,6 +16,7 @@
   <a href="lofts.html"          data-page="lofts">Lofts</a>
   <a href="vender.html"         data-page="vender">Vender</a>
   <a href="tour-virtual.html"   data-page="tour-virtual">Tour Virtual</a>
+  <a href="zonas.html"          data-page="zonas">Zonas</a>
   <a href="sobre-nosotros.html" data-page="sobre-nosotros">Sobre Nosotros</a>
   <a href="blog.html"           data-page="blog">Blog</a>
   <a href="contacto.html" class="nav-mobile-cta">Contacto</a>
@@ -47,12 +48,13 @@
         </div>
       </div>
     </div>
+    <a href="zonas.html"          data-page="zonas">Zonas</a>
     <a href="sobre-nosotros.html" data-page="sobre-nosotros">Sobre Nosotros</a>
     <a href="blog.html"           data-page="blog">Blog</a>
   </div>
 
   <div class="nr">
-    <span class="n-phone">957 080 310</span>
+    <a href="tel:957080310" class="n-phone">957 080 310</a>
     <div class="n-div"></div>
     <a href="contacto.html" class="n-cta">Contacto</a>
   </div>
@@ -92,6 +94,7 @@
         <li><a href="exclusivas.html">Exclusivas</a></li>
         <li><a href="lofts.html">Lofts</a></li>
         <li><a href="vender.html">Vender</a></li>
+        <li><a href="zonas.html">Guía de zonas</a></li>
         <li><a href="blog.html">Blog</a></li>
       </ul>
     </div>
@@ -200,7 +203,69 @@
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeMenu();
+    if (e.key === 'Escape') { closeMenu(); closeLead(); }
   });
+
+  /* ────────────────────────────────────────────────────────
+     COOKIE BANNER
+  ──────────────────────────────────────────────────────── */
+  if (!localStorage.getItem('cookies_accepted')) {
+    var cookieEl = document.createElement('div');
+    cookieEl.className = 'cookie-banner';
+    cookieEl.innerHTML = '<p class="cookie-text">Usamos cookies propias y de terceros para mejorar tu experiencia. Puedes aceptarlas todas o solo las esenciales. <a href="#">Política de cookies</a></p>' +
+      '<div class="cookie-btns"><button class="cookie-accept" id="cookie-ok">Aceptar todas</button><button class="cookie-reject" id="cookie-rej">Solo esenciales</button></div>';
+    document.body.appendChild(cookieEl);
+    setTimeout(function () { cookieEl.classList.add('show'); }, 800);
+    document.getElementById('cookie-ok').addEventListener('click', function () {
+      localStorage.setItem('cookies_accepted', 'all');
+      cookieEl.classList.remove('show');
+    });
+    document.getElementById('cookie-rej').addEventListener('click', function () {
+      localStorage.setItem('cookies_accepted', 'essential');
+      cookieEl.classList.remove('show');
+    });
+  }
+
+  /* ────────────────────────────────────────────────────────
+     LEAD POPUP — aparece a los 15 segundos, solo una vez por sesión
+  ──────────────────────────────────────────────────────── */
+  var page = document.body.dataset.page || 'index';
+  if (page !== 'contacto' && !sessionStorage.getItem('popup_shown')) {
+    var popup = document.createElement('div');
+    popup.className = 'lead-popup';
+    popup.innerHTML =
+      '<div class="lead-popup-box">' +
+        '<button class="lead-popup-close" id="popup-close">✕</button>' +
+        '<div class="lead-popup-tag">Oferta exclusiva</div>' +
+        '<h2 class="lead-popup-h">¿Sabes cuánto<br>vale tu vivienda?</h2>' +
+        '<p class="lead-popup-p">Valoración gratuita con nuestros expertos. Sin compromiso, respuesta en menos de 24 horas.</p>' +
+        '<div class="lead-popup-ig">' +
+          '<input class="lead-popup-input" type="text" placeholder="Tu nombre y teléfono" id="popup-input">' +
+          '<button class="lead-popup-btn" id="popup-btn">Valorar gratis</button>' +
+        '</div>' +
+        '<p class="lead-popup-note">Tus datos están protegidos. Sin compromiso.</p>' +
+      '</div>';
+    document.body.appendChild(popup);
+
+    function closeLead() {
+      popup.classList.remove('show');
+      sessionStorage.setItem('popup_shown', '1');
+    }
+
+    setTimeout(function () {
+      popup.classList.add('show');
+    }, 15000);
+
+    document.getElementById('popup-close').addEventListener('click', closeLead);
+    popup.addEventListener('click', function (e) { if (e.target === popup) closeLead(); });
+    document.getElementById('popup-btn').addEventListener('click', function () {
+      var input = document.getElementById('popup-input');
+      if (!input.value.trim()) { input.style.borderColor = 'var(--terra)'; return; }
+      window.open('https://valoracion.tucasacordoba.com/', '_blank');
+      closeLead();
+    });
+  } else {
+    function closeLead() {}
+  }
 
 })();

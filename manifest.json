@@ -1,0 +1,24 @@
+{
+  "name": "Tu Casa Córdoba",
+  "short_name": "TuCasa",
+  "description": "Inmobiliaria en Córdoba — Compramos, vendemos y alquilamos viviendas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0807",
+  "theme_color": "#ea0f01",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://tucasapre.hostingcordoba.com/wp-content/uploads/2025/02/logoNegro.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://tucasapre.hostingcordoba.com/wp-content/uploads/2025/02/logoNegro.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["real-estate", "business"],
+  "lang": "es"
+}

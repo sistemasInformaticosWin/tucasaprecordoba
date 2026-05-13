@@ -3,11 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Inmobiliaria en Córdoba. Compramos, vendemos y alquilamos viviendas con más de 25 años de experiencia. 8 oficinas en Córdoba y Málaga.">
+<meta property="og:title" content="Tu Casa Córdoba">
+<meta property="og:description" content="Más de 1.200 viviendas vendidas. Encuentra tu hogar en Córdoba con tucasa córdoba.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://tucasapre.hostingcordoba.com/wp-content/uploads/2025/02/logoNegro.png">
+<meta name="twitter:card" content="summary_large_image">
 <title>Tu Casa Córdoba</title>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="manifest" href="manifest.json">
 </head>
 <body data-page="comprar">
 <div id="header-root"></div>
@@ -25,10 +32,10 @@
 
 <!-- FILTROS -->
 <div class="filter-bar">
-  <select class="filter-sel"><option>Tipo de inmueble</option><option>Casa</option><option>Piso</option><option>Loft</option><option>Ático</option><option>Chalet</option></select>
-  <select class="filter-sel"><option>Precio máximo</option><option>Hasta 150.000€</option><option>Hasta 250.000€</option><option>Hasta 350.000€</option><option>Más de 350.000€</option></select>
-  <select class="filter-sel"><option>Habitaciones</option><option>1</option><option>2</option><option>3</option><option>4+</option></select>
-  <select class="filter-sel"><option>Zona</option><option>Santa Rosa</option><option>Zona Sur</option><option>Levante Sur</option><option>Ciudad Jardín</option><option>Arroyo del Moro</option><option>Centro</option></select>
+  <select class="filter-sel filter-tipo"><option value="all">Tipo de inmueble</option><option value="casa">Casa</option><option value="piso">Piso</option><option value="loft">Loft</option><option value="atico">Ático</option><option value="chalet">Chalet</option></select>
+  <select class="filter-sel filter-precio"><option value="all">Precio máximo</option><option value="150000">Hasta 150.000€</option><option value="250000">Hasta 250.000€</option><option value="350000">Hasta 350.000€</option><option value="9999999">Sin límite</option></select>
+  <select class="filter-sel filter-habs"><option value="all">Habitaciones</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option></select>
+  <select class="filter-sel filter-zona"><option value="all">Zona</option><option value="santa-rosa">Santa Rosa</option><option value="zona-sur">Zona Sur</option><option value="levante-sur">Levante Sur</option><option value="ciudad-jardin">Ciudad Jardín</option><option value="arroyo-del-moro">Arroyo del Moro</option><option value="centro">Centro</option></select>
   <button class="filter-btn">Buscar</button>
 </div>
 
@@ -41,8 +48,7 @@
 </section>
 <div style="padding:0 52px 52px;background:var(--ink);">
   <div class="bento-grid rv">
-    <!-- Tarjeta grande (span 2 cols x 2 filas) -->
-    <div class="bento-card bento-span2 bento-row2">
+    <div class="bento-card bento-span2 bento-row2" data-id="tcc-001" data-tipo="chalet" data-precio="410000" data-hab="5" data-zona="arroyo-del-moro">
       <div class="bento-bg" style="background-image:url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&q=85')"></div>
       <div class="bento-veil"></div>
       <div class="bento-badge">Exclusiva</div>
@@ -53,8 +59,7 @@
         <div class="bento-price">410.000€</div>
       </div>
     </div>
-    <!-- Tarjeta normal -->
-    <div class="bento-card">
+    <div class="bento-card" data-id="tcc-002">
       <div class="bento-bg" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80')"></div>
       <div class="bento-veil"></div>
       <div class="bento-badge">Destacada</div>
@@ -73,8 +78,7 @@
       </div>
       <a href="contacto.html" class="bento-text-cta">Hablar con un agente →</a>
     </div>
-    <!-- Otra normal -->
-    <div class="bento-card">
+    <div class="bento-card" data-id="tcc-003">
       <div class="bento-bg" style="background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80')"></div>
       <div class="bento-veil"></div>
       <div class="bento-badge">En venta</div>
@@ -85,8 +89,7 @@
         <div class="bento-price">285.000€</div>
       </div>
     </div>
-    <!-- Normal -->
-    <div class="bento-card">
+    <div class="bento-card" data-id="tcc-005">
       <div class="bento-bg" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80')"></div>
       <div class="bento-veil"></div>
       <div class="bento-badge">Nueva</div>
@@ -97,8 +100,7 @@
         <div class="bento-price">365.000€</div>
       </div>
     </div>
-    <!-- Span 2 abajo -->
-    <div class="bento-card bento-span2">
+    <div class="bento-card bento-span2" data-id="tcc-004">
       <div class="bento-bg" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80')"></div>
       <div class="bento-veil"></div>
       <div class="bento-badge">Exclusiva</div>
@@ -168,6 +170,54 @@
   </div>
 </section>
 
+<!-- CALCULADORA HIPOTECA -->
+<section class="calc-section">
+  <div class="sec-header light" style="margin-bottom:52px;">
+    <h2 class="sec-title rv" style="color:var(--ink)">Calculadora de hipoteca</h2>
+    <p class="sec-sub rv d1" style="color:rgba(10,8,7,.5)">Estima tu cuota mensual en segundos. Resultado orientativo.</p>
+  </div>
+  <div class="calc-grid">
+    <div class="calc-form rv">
+      <div class="calc-field">
+        <label class="calc-label" for="calc-precio">Precio de la vivienda (€)</label>
+        <input class="calc-input" id="calc-precio" type="number" value="250000" min="50000" max="2000000" step="5000">
+      </div>
+      <div class="calc-field">
+        <label class="calc-label" for="calc-entrada">Entrada: <span id="calc-entrada-label">20%</span></label>
+        <input class="calc-range" id="calc-entrada" type="range" value="20" min="5" max="50" step="1">
+      </div>
+      <div class="calc-field">
+        <label class="calc-label" for="calc-plazo">Plazo: <span id="calc-plazo-label">25 años</span></label>
+        <input class="calc-range" id="calc-plazo" type="range" value="25" min="5" max="40" step="1">
+      </div>
+      <div class="calc-field">
+        <label class="calc-label" for="calc-tipo">Tipo de interés anual (%)</label>
+        <input class="calc-input" id="calc-tipo" type="number" value="3.5" min="0.5" max="10" step="0.1">
+      </div>
+    </div>
+    <div class="calc-result rv d1">
+      <div>
+        <div class="calc-result-label">Cuota mensual estimada</div>
+        <div class="calc-result-value" id="calc-cuota">—</div>
+        <div class="calc-result-sub">Al mes durante el plazo seleccionado</div>
+      </div>
+      <div>
+        <div class="calc-result-label">Capital financiado</div>
+        <div class="calc-result-value" id="calc-capital" style="font-size:clamp(26px,3vw,36px);">—</div>
+      </div>
+      <div>
+        <div class="calc-result-label">Total intereses</div>
+        <div class="calc-result-value" id="calc-intereses" style="font-size:clamp(26px,3vw,36px);">—</div>
+      </div>
+      <div>
+        <div class="calc-result-label">Total a pagar</div>
+        <div class="calc-result-value" id="calc-total" style="font-size:clamp(26px,3vw,36px);">—</div>
+      </div>
+    </div>
+  </div>
+  <p class="calc-disclaimer rv">* Cálculo orientativo. Las condiciones reales dependen de la entidad financiera, tu perfil y el tipo de interés vigente. Consulta con tu banco.</p>
+</section>
+
 <section class="val-section">
   <div class="val-visual">
     <div class="val-bg"></div>
@@ -184,6 +234,49 @@
     </div>
   </div>
 </section>
+
+<!-- ALERTA DE PROPIEDADES -->
+<section class="sec-dark">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1100px;margin:0 auto;">
+    <div>
+      <div class="val-tag rv">Alerta personalizada</div>
+      <h2 class="val-h rv d1" style="font-size:clamp(32px,4vw,50px);">Te avisamos cuando<br>aparezca tu vivienda.</h2>
+      <p class="val-p rv d2" style="font-size:18px;">Dinos qué buscas y te enviamos un email en cuanto tengamos algo que encaje. Sin spam, sin compromiso.</p>
+    </div>
+    <form class="rv d2" id="alert-form">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+        <div class="val-ig" style="margin-bottom:0;"><input class="val-input" type="text" placeholder="Tu nombre" id="alert-nombre"></div>
+        <div class="val-ig" style="margin-bottom:0;"><input class="val-input" type="email" placeholder="Tu email" id="alert-email" required></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+        <select class="val-input" style="background:transparent;cursor:pointer;" id="alert-tipo">
+          <option value="">Tipo de vivienda</option>
+          <option>Casa</option><option>Piso</option><option>Loft</option><option>Ático</option><option>Chalet</option>
+        </select>
+        <select class="val-input" style="background:transparent;cursor:pointer;" id="alert-precio">
+          <option value="">Precio máximo</option>
+          <option>150.000€</option><option>250.000€</option><option>350.000€</option><option>500.000€</option><option>Sin límite</option>
+        </select>
+      </div>
+      <div class="val-ig" style="margin-bottom:16px;"><input class="val-input" type="text" placeholder="Zona o barrio preferido" id="alert-zona"></div>
+      <button type="submit" class="val-submit" style="width:100%;padding:16px;" id="alert-btn">Crear alerta gratuita</button>
+      <p style="font-size:11px;color:rgba(244,237,230,.22);margin-top:10px;text-align:center;">Sin spam. Te avisamos solo cuando aparezca algo que encaje.</p>
+    </form>
+  </div>
+</section>
+
+<script>
+document.getElementById('alert-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var email = document.getElementById('alert-email').value;
+  if (!email || !email.includes('@')) return;
+  var btn = document.getElementById('alert-btn');
+  btn.textContent = '✓ Alerta creada — te avisaremos pronto';
+  btn.style.background = '#2a7a4b';
+  btn.disabled = true;
+  this.reset();
+});
+</script>
 
 <div id="footer-root"></div>
 <script src="js/components.js"></script>
