@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu Casa Córdoba</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="comprar">
+<div id="header-root"></div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&q=90')"></div>
+  <div class="page-hero-veil"></div>
+  <div class="page-hero-body">
+    <div class="page-tag">Comprar vivienda</div>
+    <h1 class="page-h1">Encuentra<br>tu próximo<br>hogar.</h1>
+    <p class="page-sub">Casa, piso, loft o ático — conocemos cada zona, cada calle, cada oportunidad de Córdoba.</p>
+  </div>
+</section>
+
+<!-- FILTROS -->
+<div class="filter-bar">
+  <select class="filter-sel"><option>Tipo de inmueble</option><option>Casa</option><option>Piso</option><option>Loft</option><option>Ático</option><option>Chalet</option></select>
+  <select class="filter-sel"><option>Precio máximo</option><option>Hasta 150.000€</option><option>Hasta 250.000€</option><option>Hasta 350.000€</option><option>Más de 350.000€</option></select>
+  <select class="filter-sel"><option>Habitaciones</option><option>1</option><option>2</option><option>3</option><option>4+</option></select>
+  <select class="filter-sel"><option>Zona</option><option>Santa Rosa</option><option>Zona Sur</option><option>Levante Sur</option><option>Ciudad Jardín</option><option>Arroyo del Moro</option><option>Centro</option></select>
+  <button class="filter-btn">Buscar</button>
+</div>
+
+<!-- BENTO GRID — propiedades -->
+<section class="sec-dark" style="padding-bottom:0">
+  <div class="sec-header" style="padding-bottom:0;margin-bottom:32px;">
+    <h2 class="sec-title rv">Propiedades disponibles</h2>
+    <p class="sec-sub rv d1">Selección actualizada en Córdoba y Málaga.</p>
+  </div>
+</section>
+<div style="padding:0 52px 52px;background:var(--ink);">
+  <div class="bento-grid rv">
+    <!-- Tarjeta grande (span 2 cols x 2 filas) -->
+    <div class="bento-card bento-span2 bento-row2">
+      <div class="bento-bg" style="background-image:url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&q=85')"></div>
+      <div class="bento-veil"></div>
+      <div class="bento-badge">Exclusiva</div>
+      <div class="bento-body">
+        <div class="bento-zone">Arroyo del Moro</div>
+        <div class="bento-name">Chalet con piscina infinita y jardín privado</div>
+        <div class="bento-attrs">5 hab · 3 baños · 250 m²</div>
+        <div class="bento-price">410.000€</div>
+      </div>
+    </div>
+    <!-- Tarjeta normal -->
+    <div class="bento-card">
+      <div class="bento-bg" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80')"></div>
+      <div class="bento-veil"></div>
+      <div class="bento-badge">Destacada</div>
+      <div class="bento-body">
+        <div class="bento-zone">Santa Rosa</div>
+        <div class="bento-name">Casa moderna, centro Córdoba</div>
+        <div class="bento-attrs">4 hab · 2 baños · 180 m²</div>
+        <div class="bento-price">325.000€</div>
+      </div>
+    </div>
+    <!-- Tarjeta texto con CTA -->
+    <div class="bento-card bento-text">
+      <div>
+        <div class="bento-text-label">Asesoramiento gratuito</div>
+        <div class="bento-text-body">¿No encuentras<br>lo que buscas?<br>Te lo encontramos.</div>
+      </div>
+      <a href="contacto.html" class="bento-text-cta">Hablar con un agente →</a>
+    </div>
+    <!-- Otra normal -->
+    <div class="bento-card">
+      <div class="bento-bg" style="background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80')"></div>
+      <div class="bento-veil"></div>
+      <div class="bento-badge">En venta</div>
+      <div class="bento-body">
+        <div class="bento-zone">Ciudad Jardín</div>
+        <div class="bento-name">Ático vistas panorámicas</div>
+        <div class="bento-attrs">3 hab · 2 baños · 120 m²</div>
+        <div class="bento-price">285.000€</div>
+      </div>
+    </div>
+    <!-- Normal -->
+    <div class="bento-card">
+      <div class="bento-bg" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80')"></div>
+      <div class="bento-veil"></div>
+      <div class="bento-badge">Nueva</div>
+      <div class="bento-body">
+        <div class="bento-zone">Zona Sur</div>
+        <div class="bento-name">Casa jardín privado</div>
+        <div class="bento-attrs">4 hab · 3 baños · 220 m²</div>
+        <div class="bento-price">365.000€</div>
+      </div>
+    </div>
+    <!-- Span 2 abajo -->
+    <div class="bento-card bento-span2">
+      <div class="bento-bg" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80')"></div>
+      <div class="bento-veil"></div>
+      <div class="bento-badge">Exclusiva</div>
+      <div class="bento-body">
+        <div class="bento-zone">Levante Sur · Piso reformado con terraza</div>
+        <div class="bento-name">Reforma integral, materiales de primera calidad</div>
+        <div class="bento-attrs">3 hab · 1 baño · 95 m²</div>
+        <div class="bento-price">189.000€</div>
+      </div>
+    </div>
+  </div>
+  <div class="rv" style="text-align:center;padding-top:36px;">
+    <a href="https://crm.inmovilla.com" target="_blank" class="btn-f">Ver catálogo completo</a>
+  </div>
+</div>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote-wrap">
+  <blockquote class="pull-quote rv">"Más de 1.200 viviendas vendidas en Córdoba. Cada una, una historia diferente."</blockquote>
+  <div class="pull-quote-attr rv d1">tucasa córdoba · Desde 1999</div>
+</div>
+
+<!-- TIMELINE — proceso de compra -->
+<div class="timeline-wrap">
+  <div class="sec-header light" style="margin-bottom:52px;">
+    <h2 class="sec-title rv" style="color:var(--ink)">Cómo te ayudamos</h2>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item rv">
+      <div class="timeline-dot"></div>
+      <div class="timeline-num">01 — Asesoramiento</div>
+      <div class="timeline-title">Analizamos tu perfil</div>
+      <div class="timeline-text">Presupuesto, zona, tipo de inmueble y necesidades. Te orientamos desde el primer momento.</div>
+    </div>
+    <div class="timeline-item rv d1">
+      <div class="timeline-dot"></div>
+      <div class="timeline-num">02 — Selección</div>
+      <div class="timeline-title">Solo lo que encaja</div>
+      <div class="timeline-text">Filtramos el catálogo completo y te presentamos únicamente las propiedades que se ajustan a lo que buscas.</div>
+    </div>
+    <div class="timeline-item rv d2">
+      <div class="timeline-dot"></div>
+      <div class="timeline-num">03 — Negociación</div>
+      <div class="timeline-title">Negociamos por ti</div>
+      <div class="timeline-text">Te acompañamos en cada visita y negociamos el precio en tu nombre para obtener las mejores condiciones.</div>
+    </div>
+    <div class="timeline-item rv d3">
+      <div class="timeline-dot"></div>
+      <div class="timeline-num">04 — Firma</div>
+      <div class="timeline-title">Hasta el notario</div>
+      <div class="timeline-text">Gestionamos toda la documentación y coordinamos la firma. Sin estrés, sin complicaciones.</div>
+    </div>
+  </div>
+  <div style="margin-top:44px;" class="rv">
+    <a href="#" class="btn-ink">Descargar guía gratuita del comprador</a>
+  </div>
+</div>
+
+<!-- STATS + CTA -->
+<section class="stats">
+  <div class="stats-wm">comprar</div>
+  <div class="stats-grid">
+    <div class="stat"><span class="sn" data-to="8">0</span><div class="sl">Oficinas en Córdoba</div></div>
+    <div class="stat"><span class="sn" data-to="25">0</span><div class="sl">Años de experiencia</div></div>
+    <div class="stat"><span class="sn" data-to="1200">0</span><div class="sl">Viviendas vendidas</div></div>
+    <div class="stat"><span class="sn" data-to="4.9" data-dec>0</span><div class="sl">Valoración Google ★</div></div>
+  </div>
+</section>
+
+<section class="val-section">
+  <div class="val-visual">
+    <div class="val-bg"></div>
+    <div class="val-veil"></div>
+    <div class="val-img-text rv">¿Buscas algo concreto? Te lo encontramos.</div>
+  </div>
+  <div class="val-form">
+    <div class="val-tag rv">Sin compromiso</div>
+    <h2 class="val-h rv d1">Cuéntanos<br>qué buscas.</h2>
+    <p class="val-p rv d2">Un agente dedicado te llama en menos de 24 horas con opciones que encajan con tu perfil.</p>
+    <div class="rv d3">
+      <div class="val-ig"><input class="val-input" type="text" placeholder="Tu nombre y teléfono"><button class="val-submit">Contactar</button></div>
+      <p class="val-note">Tus datos están protegidos. Sin compromiso.</p>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
